@@ -1,60 +1,16 @@
 {
   "profiles": [
     {
-      "id": "X",
-      "name": "Pessoa X"
+      "id": "9e2e",
+      "name": "João"
     },
     {
-      "id": "X",
-      "name": "Pessoa X"
+      "id": "2aa3",
+      "name": "Maria"
     },
     {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
-    },
-    {
-      "id": "X",
-      "name": "Pessoa X"
+      "id": "f9a9",
+      "name": "José"
     }
   ]
 }

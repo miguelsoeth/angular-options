@@ -17,6 +17,7 @@ mat-dialog-content {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    width: 470px;
 }
 
 .profile-name {
@@ -27,6 +28,8 @@ mat-dialog-content {
 
 .profile-actions {
     display: flex;
+    flex-direction: row-reverse;
+    width: 100%;    
     gap: 10px;
 }
 
