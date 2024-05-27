@@ -1,0 +1,29 @@
+<mat-dialog-content>
+    <h1 mat-dialog-title>
+        Usuários de {{userDetail.fullName}}
+    </h1>
+    @if (isLoadingResults) {
+        <div class="loading-shade">
+            <mat-spinner></mat-spinner>
+        </div>
+    }
+    <div class="profile-content" *ngIf="profilesDetail | async as profiles">
+        @for(profile of profiles; track profile) {
+            <div class="profile">
+                <div class="profile-name">
+                    {{profile.name}}
+                </div>
+                <div class="profile-actions">
+                    <button mat-raised-button color="primary">Editar<mat-icon matSuffix>edit</mat-icon></button>
+                    <button mat-raised-button color="warn" (click)="deleteProfile(profile.id)">Deletar<mat-icon matSuffix>delete</mat-icon></button>
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        <button mat-raised-button color="primary">Criar perfil<mat-icon matSuffix>add</mat-icon></button>
+    </div>    
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Okay</button>
+</mat-dialog-actions>
