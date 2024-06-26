@@ -1,0 +1,20 @@
+.form {
+    border: 2px solid black;
+    padding: 10px;;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.content > * {
+    font-size: 1.2rem;
+    width: 50%;
+}
+
+.document-value mat-hint {
+    color: red;
+}
+
+.actions {
+    justify-content: end;
+}

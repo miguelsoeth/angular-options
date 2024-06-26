@@ -1,16 +1,3 @@
 {
-  "profiles": [
-    {
-      "id": "9e2e",
-      "name": "João"
-    },
-    {
-      "id": "2aa3",
-      "name": "Maria"
-    },
-    {
-      "id": "f9a9",
-      "name": "José"
-    }
-  ]
+  "profiles": []
 }

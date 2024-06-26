@@ -1,0 +1,39 @@
+<form [formGroup]="myForm" (ngSubmit)="search()" class="form">
+    <div class="content">
+      <!--CAMPO DE ESCOLHA DO TIPO DE CONSULTA-->
+      <mat-form-field appearance="fill" class="document-type">
+        <mat-label>Consulta por:</mat-label>
+        <mat-select formControlName="typeField" required>
+          <mat-option *ngFor="let type of documentType" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!--CAMPO DE ESCOLHA DE DATA-->
+      <mat-form-field appearance="fill" class="date-picker">
+        <mat-label>Data referência:</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateField" [max]="maxDate" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!--CAMPO PARA DIGITAR O NUM. DO DOCUMENTO ESCOLHIDO-->
+      <mat-form-field appearance="fill" class="document-value">
+        <mat-label>{{ myForm.get('typeField')!.value }}</mat-label>
+        <input matInput [mask]="myForm.get('typeField')!.value === 'CPF' ? '000.000.000-00' : '00.000.000/0000-00'" formControlName="documentField" required>
+        <mat-hint *ngIf="myForm.get('documentField')!.enabled">Somente números</mat-hint>
+      </mat-form-field>
+      <!--CAMPO DE ESCOLHA DO INTERVALO DE PESQUISA-->
+      <mat-form-field appearance="fill" class="search-interval">
+        <mat-label>Pesquisar pelos últimos:</mat-label>
+        <mat-select formControlName="intervalField" required>
+          <mat-option *ngFor="let interval of dateInterval" [value]="interval.value">
+            {{ interval.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="actions">
+      <button mat-raised-button type="button" (click)="closeDialog()">Cancelar</button>
+      <button mat-raised-button [disabled]="myForm.invalid">Buscar</button>
+    </div>
+  </form>
